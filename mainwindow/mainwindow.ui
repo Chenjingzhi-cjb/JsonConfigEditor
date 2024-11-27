@@ -6,15 +6,156 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>691</width>
+    <height>401</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>JsonConfigEditor</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="button_load">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    background-color: qlineargradient(spread:pad, x1:0.511, y1:1, x2:0.517, y2:0, stop:0 rgba(221, 221, 221, 255), stop:1 rgba(240, 240, 240, 255));
+    border: 1px solid #6E98D4;
+    font: 11pt &quot;Segoe UI&quot;;
+    border-radius: 7px;
+}
+
+QPushButton:hover
+{
+    border-radius : 4px;
+    background-color: #DBE6F4;
+    border: 1px solid #6E98D4;
+}
+
+QPushButton:pressed
+{
+    border-radius : 4px;
+    background-color: #BBCEEA;
+    border: 1px solid #3A73C2;
+}</string>
+    </property>
+    <property name="text">
+     <string>Load</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_save">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>110</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    background-color: qlineargradient(spread:pad, x1:0.511, y1:1, x2:0.517, y2:0, stop:0 rgba(221, 221, 221, 255), stop:1 rgba(240, 240, 240, 255));
+    border: 1px solid #6E98D4;
+    font: 11pt &quot;Segoe UI&quot;;
+    border-radius: 7px;
+}
+
+QPushButton:hover
+{
+    border-radius : 4px;
+    background-color: #DBE6F4;
+    border: 1px solid #6E98D4;
+}
+
+QPushButton:pressed
+{
+    border-radius : 4px;
+    background-color: #BBCEEA;
+    border: 1px solid #3A73C2;
+}</string>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_update">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>60</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    background-color: qlineargradient(spread:pad, x1:0.511, y1:1, x2:0.517, y2:0, stop:0 rgba(221, 221, 221, 255), stop:1 rgba(240, 240, 240, 255));
+    border: 1px solid #6E98D4;
+    font: 11pt &quot;Segoe UI&quot;;
+    border-radius: 7px;
+}
+
+QPushButton:hover
+{
+    border-radius : 4px;
+    background-color: #DBE6F4;
+    border: 1px solid #6E98D4;
+}
+
+QPushButton:pressed
+{
+    border-radius : 4px;
+    background-color: #BBCEEA;
+    border: 1px solid #3A73C2;
+}</string>
+    </property>
+    <property name="text">
+     <string>Update</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="config_widget">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>10</y>
+      <width>561</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+    </property>
+    <column>
+     <property name="text">
+      <string>属性</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>值</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>691</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>

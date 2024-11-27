@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 INCLUDEPATH += \
+    json_config/include/ \
     mainwindow/
 
 SOURCES += \
@@ -16,6 +17,7 @@ SOURCES += \
     mainwindow/mainwindow.cpp
 
 HEADERS += \
+    json_config/include/json_config.hpp \
     mainwindow/mainwindow.h
 
 FORMS += \
@@ -25,3 +27,8 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RC_FILE += app.rc
+
+RESOURCES += \
+    resource.qrc
